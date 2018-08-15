@@ -1,3 +1,18 @@
+@keyframes fadeIn{
+  from{left: -350px;}
+  to{left: 0;}
+}
+
+@keyframes fadeOut{
+  from{left: 0px;}
+  to{left: -350px;}
+}
+@keyframes textFade{
+  from{opacity: 1;}
+  to{opacity-right: 0};
+}
+
+
 .menu-button {
   position: absolute;
   left: 20px;
@@ -16,6 +31,7 @@
   border-left: none;
   border-bottom: none;
   z-index: 2; /* This set the layer level of the element, it has precendence over initial level of 1*/
+ 
 }
 
 .menu ul li{
@@ -27,5 +43,12 @@
 
 .menu--open {
   display: block;
+  animation: fadeIn 2s 1;
+  animation-timing-function: linear;
+}
+
+.menu--close{
+  display:block;
+  animation: fadeOut 2s 1;
 }
 
